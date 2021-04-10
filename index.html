@@ -5,11 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="style.css">
     <title>Memory Cards</title>
 </head>
 
 <body>
+    <button class="btn clear" id="clear"><i class="fas fa-trash"></i>Clear cards</button>
+    <h1>Memory Cards
+        <button class="btn btn-small" id="show"><i class="fas fa-plus"></i>Add New Card</button>
+    </h1>
+    <div class="cards" id="cards-container">
+        <div class="card active">
+            <div class="inner-card">
+                <div class="inner-card-front">
+                    <p>is this the real life?</p>
+                </div>
+                <div class="inner-card-back">
+                    <p>is this just fantasy?</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <div class="inner-card-front">
+                    <p>are you gonna drop the bomb or not?</p>
+                </div>
+                <div class="inner-card-back">
+                    <p>are you?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <button class="nav-button" id="prev">
+            <div class="fas fa-arrow-left"></div>
+        </button>
+        <p id="current"></p>
+        <button class="nav-button" id="next">
+            <div class="fas fa-arrow-right"></div>
+        </button>
+    </div>
+    <div class="add-container" id="add-cointainer">
+        <h1>Add New Card
+            <button id="hide" class="btn btn-small btn-ghost"><i class="fas fa-times"></i></button>
+        </h1>
+        <div class="form-group">
+            <label for="question">Question</label><textarea id="question" placeholder="Enter question"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="answer">Answer</label><textarea id="answer" placeholder="Enter answer"></textarea>
+        </div>
+        <button class="btn" id="add-card"><i class="fas fa-plus"></i>Add Card</button>
+    </div>
     <script src="script.js"></script>
 </body>
 
